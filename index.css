@@ -1,0 +1,147 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans 3", sans-serif;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(image/discovery.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  height: 100vh;
+}
+.container-image{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container-image h1{
+  color: #fff;
+  font-size: 45px;
+}
+.container-image span{
+  color: #fff;
+  font-size: 25px;
+}
+.image-file{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.file-pButton{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.file-input-container {
+  display: flex;
+}
+.custom-file-input {
+  font-size: 18px !important;
+  display: inline-block;
+  background: #D2AA46;
+  color: #fff !important;
+  max-width: 160px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.custom-file-input:hover{
+  background-color: #9b845d;
+}
+/* Hide the default file input */
+input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+.image-file button{
+  font-size: 18px;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #D2AA46;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.image-file button:hover {
+  background-color: #9b845d;
+}
+#error-image{
+  color: red;
+  width: fit-content;
+}
+.container{
+  width: fit-content;
+}
+ /* Image styles */
+.preview-box {
+  display: none;
+  width: 250px;
+  height: auto;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.image-container{
+  display: flex;
+  width: 100%;
+}
+.preview-image{
+  width: 100%;
+}
+/* Download button styles */
+#downloadButton {
+  display: none;
+  padding: 10px 20px;
+  background-color: #D2AA46;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#downloadButton:hover {
+  background-color: #9b845d;
+}
+
+@media (max-width: 805px){
+  body{
+    background-size: cover;
+  }
+  .container-image{
+    padding: 20px;
+  }
+  .container-image h1{
+    font-size: 30px;
+    text-align: center;
+  }
+  .container-image span{
+    font-size: 20px;
+  }
+  .custom-file-input,
+  .image-file button{
+    padding: 5px 10px;
+  }
+  /* Image styles */
+  .preview-box {
+    width: 200px;
+    height: auto;
+  }
+  #downloadButton {
+    padding: 5px 10px;
+  }
+}
