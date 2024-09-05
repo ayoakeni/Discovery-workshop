@@ -145,3 +145,8 @@ input[type="file"] {
     padding: 5px 10px;
   }
 }
+@media (max-width: 400px){
+  body{
+    background-size: contain;
+  }
+}
